@@ -27,9 +27,11 @@ jobs:
     - name: Step 1
       run: |
         echo "This is step 1"
-        echo "number1=1 >> $GITHUB_OUTPUT"
+        echo "number1=1" >> "$GITHUB_OUTPUT"
+        echo "1" >> $GITHUB_STEP_SUMMARY
 
     - name: Step 2
       run: |
         echo "This is step 2"
-        echo "number2=2 >> $GITHUB_OUTPUT"
+        echo "number2=2" >> "$GITHUB_OUTPUT"
+        echo "2" >> $GITHUB_STEP_SUMMARY
